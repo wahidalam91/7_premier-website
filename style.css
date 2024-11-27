@@ -170,4 +170,54 @@ nav h3:nth-last-child(2){
     justify-content: center;
 }
 
+/* Scroll related styles */
 
+#scroll{
+    width: 100%;
+    height: 25%;
+    white-space: nowrap;
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    
+}
+
+#container{
+    width: 110%;
+    height: 100%;
+    background-color: blue;
+
+    padding: 1vw;
+
+    display: inline-block;
+
+    position: relative;
+
+    animation-name: auto-scrolling;
+    animation-duration: 10s;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+    margin: 35px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes auto-scrolling {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
